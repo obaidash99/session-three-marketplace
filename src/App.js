@@ -28,9 +28,6 @@ function App() {
 			{isLoggedIn ? <Welcome name="Obaida" /> : <Guest />}
 
 			<List /> */}
-			<div className="products-list">
-				<h1>Hello There</h1>
-			</div>
 			<ProductsList />
 		</>
 	);

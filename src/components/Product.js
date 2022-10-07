@@ -4,7 +4,7 @@ function Product({ product }) {
 	return (
 		<div className="card">
 			<img src={product.image} alt="" />
-			<h1>{product.title}</h1>
+			<h2>{product.title}</h2>
 			<p>{product.description}</p>
 			<p>Price: {product.price}</p>
 			<button
