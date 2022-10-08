@@ -3,7 +3,7 @@ import './Product.css';
 function Product({ product }) {
 	return (
 		<div className="card">
-			<img src={product.image} alt="" />
+			<img src={product.image} alt="img" loading="lazy" />
 			<h2>{product.title}</h2>
 			<p>{product.description}</p>
 			<p>Price: {product.price}</p>

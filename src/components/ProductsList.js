@@ -7,16 +7,16 @@ import { useState } from 'react';
 function ProductsList() {
 	const [category, setCategory] = useState('');
 
-	const product = productsData.map((product) => {
+	let product;
+
+	product = productsData.map((product) => {
 		return product.category === category ? (
+			<Product product={product} key={product.id} />
+		) : !category ? (
 			<Product product={product} key={product.id} />
 		) : null;
 		// product.price > 100 ? <Product product={product} key={product.id} /> : null;
 	});
-
-	function resetAll() {
-		console.log('reset');
-	}
 
 	return (
 		<>
@@ -53,7 +53,13 @@ function ProductsList() {
 				Electronics
 			</button>
 
-			<button onClick={resetAll}>Reset</button>
+			<button
+				onClick={() => {
+					setCategory('');
+				}}
+			>
+				Clear
+			</button>
 
 			<div className="products-list">
 				<div className="row">{product}</div>
